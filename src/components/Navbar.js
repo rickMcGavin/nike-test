@@ -10,6 +10,17 @@ const Navbar = () => {
 			<span className={css(styles.brandSpan)}>
 				<img className={css(styles.logo)} src={logo} alt="Nike Logo"/>
 			</span>
+			<ul className={css(styles.navLinks)}>
+				<li >
+					<a className={css(styles.navLink, styles.hover)} href="#">ABOUT</a>
+				</li>
+				<li>
+					<a className={css(styles.navLink, styles.hover)} href="#">SERVICES</a>
+				</li>
+				<li >
+					<a className={css(styles.navLink, styles.hover)} href="#">INVOLVEMENT</a>
+				</li>
+			</ul>
 		</nav>
 	)
 }
@@ -24,7 +35,7 @@ const styles = StyleSheet.create ({
 	},
 
 	brandSpan: {
-		backgroundColor: '#97C64B',
+		backgroundColor: '#ADD965',
 		width: '24.6%',
 		height: '100%',
 		display: 'flex',
@@ -33,6 +44,29 @@ const styles = StyleSheet.create ({
 
 	logo: {
 		transform: 'scale(0.65)'
+	},
+
+	navLinks: {
+		listStyle: 'none',
+		height: '100%',
+		display: 'flex',
+		alignItems: 'center',
+		margin: '0',
+		marginLeft: '12.5%'
+	},
+
+	navLink: {
+		color: '#FEFFFF',
+		display: 'inline-block',
+		marginRight: '15px',
+		fontSize: '.75rem',
+		textDecoration: 'none'
+	},
+
+	hover: {
+		':hover': {
+			borderBottom: '1px solid #FEFFFF'
+		}
 	}
 });
 

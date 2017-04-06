@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import Navbar from './components/Navbar.js';
-import Hero from './components/Hero.js';
-import HeroContent from './components/HeroContent.js';
-import Shoe from './components/Shoe.js';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import HeroContent from './components/HeroContent';
+import Shoe from './components/Shoe';
+import ShoeContent from './components/ShoeContent';
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
         <Hero />
         <HeroContent />
         <Shoe />
+        <ShoeContent />
       </div>
     );
   }

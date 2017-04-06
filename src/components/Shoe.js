@@ -16,8 +16,9 @@ const styles = StyleSheet.create ({
 		minHeight: '100vh',
 		width: '100%',
 		backgroundImage: "url('https://raw.githubusercontent.com/rickMcGavin/nike-test/master/src/assets/images/content-2-bg.png')",
-		backgroundPosition: 'center',
-		backgroundSize: 'cover',
+		backgroundPosition: 'right',
+		backgroundRepeat: 'no-repeat',
+		backgroundSize: 'contain',
 		backgroundColor: '#27292B'
 	}
 })

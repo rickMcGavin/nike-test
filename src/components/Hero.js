@@ -26,6 +26,7 @@ const styles = StyleSheet.create ({
 		backgroundImage: "url('https://raw.githubusercontent.com/rickMcGavin/nike-test/master/src/assets/images/content-1-bg.png')",
 		backgroundRepeat: 'no-repeat',
 		backgroundPosition: 'center',
+		backgroundSize: 'contain',
 		display: 'flex',
 		justifyContent: 'center',
 		alignItems: 'center'
@@ -41,14 +42,14 @@ const styles = StyleSheet.create ({
 
 	mainHeroHeader: {
 		color: '#ADD965',
-		fontSize: '3.75rem',
+		fontSize: '2.5rem',
 		marginBottom: '10px'
 	},
 
 	subHeroHeader: {
 		color: '#FEFFFF',
 		fontWeight: '300',
-		fontSize: '2.25rem',
+		fontSize: '1.5rem',
 		marginTop: '10px'
 	}
 });

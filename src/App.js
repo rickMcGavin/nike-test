@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './components/Navbar.js';
 import Hero from './components/Hero.js';
 import HeroContent from './components/HeroContent.js';
+import Shoe from './components/Shoe.js';
 
 class App extends Component {
   render() {
@@ -11,6 +12,7 @@ class App extends Component {
         <Navbar />
         <Hero />
         <HeroContent />
+        <Shoe />
       </div>
     );
   }

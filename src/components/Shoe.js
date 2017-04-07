@@ -6,8 +6,9 @@ class Shoe extends Component {
 		return(
 			<div className={css(styles.shoeSection)}>
 				<div className={css(styles.row)}>
-					<div>
-						
+					<div className={css(styles.smallColumn)}>
+						<h6 className={css(styles.noMargin)}>NIKE</h6>
+						<h5 className={css(styles.noMargin)}>SUPERFLY FG</h5>
 					</div>
 					<div>
 						
@@ -29,14 +30,24 @@ const styles = StyleSheet.create ({
 		backgroundRepeat: 'no-repeat',
 		backgroundSize: 'contain',
 		backgroundColor: '#27292B',
-		padding: '0 18.5%'
+		padding: '120px 18.5% 0 18.5%'
 	},
 
 	row: {
-		// display: 'flex',
-		backgroundColor: 'skyblue',
+		display: 'flex',
 		width: '100%'
+	},
+
+	smallColumn: {
+		width: '16.5%',
+		color: '#f2f2f2'
+	},
+
+	noMargin: {
+		margin: '0'
 	}
 })
+
+// column width 16.5%
 
 export default Shoe;

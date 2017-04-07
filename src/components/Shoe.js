@@ -5,7 +5,16 @@ class Shoe extends Component {
 	render() {
 		return(
 			<div className={css(styles.shoeSection)}>
-
+				<div className={css(styles.row)}>
+					<div>
+						
+					</div>
+					<div>
+						
+					</div>
+					<span></span>
+					<span></span>
+				</div>
 			</div>
 		)
 	}
@@ -19,7 +28,14 @@ const styles = StyleSheet.create ({
 		backgroundPosition: 'right',
 		backgroundRepeat: 'no-repeat',
 		backgroundSize: 'contain',
-		backgroundColor: '#27292B'
+		backgroundColor: '#27292B',
+		padding: '0 18.5%'
+	},
+
+	row: {
+		// display: 'flex',
+		backgroundColor: 'skyblue',
+		width: '100%'
 	}
 })
 

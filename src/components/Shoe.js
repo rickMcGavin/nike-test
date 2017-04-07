@@ -9,6 +9,16 @@ import rightView from '../assets/images/big-right.png';
 import bottomView from '../assets/images/big-bottom.png';
 
 class Shoe extends Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			leftView: true,
+			rightView: false,
+			bottomView: false
+		};
+	}
+
 	render() {
 		return(
 			<div className={css(styles.shoeSection)}>
@@ -27,12 +37,30 @@ class Shoe extends Component {
 						</div>
 					</div>
 					<div className={css(styles.bigColumn)}>
-						<img className={css(styles.circleImage)} src={circle} alt="Green Circle Background"/>
-						<img className={css(styles.shoeImage)} src={leftView} alt="Nike Mercurial Superfly FG Left View Big"/>
-						<div className={css(styles.spanContainer)}>
-							<span className={css(styles.span)}></span>
-							<span className={css(styles.span)}></span>
+						<div className={css(styles.circleContainer)}>
+							<img className={css(styles.shoeImage)} src={leftView} alt="Nike Mercurial Superfly FG Left View Big"/>
+							<div className={css(styles.spanContainer)}>
+								<span className={css(styles.span)}></span>
+								<span className={css(styles.span)}></span>
+							</div>
 						</div>
+					</div>
+				</div>
+				<div className={css(styles.row)}>
+					<div className={css(styles.contentColumn)}>
+						<h3 className={css(styles.h3, styles.h3MarginBottomAdjust)}>BLANDIT </h3>
+						<h3 className={css(styles.h3, styles.h3MarginTopAdjust)}>TINCIDUNT METUS</h3>
+						<p className={css(styles.p)}>Proin eget tortor malesuada, dapibus mi pretium, semper diam. Donec in rutrum turpis. Duis eu faucibus est. Aliquam vitae nibh vestibulum, rhoncus augue eu, venenatis erat. Vivamus ipsum metus, sodales nec scelerisque faucibus, cursus in quam. Mauris nibh neque, euismod in malesuada sed, commodo et lacus. Maecenas gravida, lacus dictum eleifend facilisis, justo felis aliquam dui, nec sodales quam neque</p>
+					</div>
+					<div className={css(styles.contentColumn)}>
+						<h3 className={css(styles.h3, styles.h3MarginBottomAdjust)}>METUS</h3>
+						<h3 className={css(styles.h3, styles.h3MarginTopAdjust)}>PELLENTESQUE</h3>
+						<p className={css(styles.p)}>Proin eget tortor malesuada, dapibus mi pretium, semper diam. Donec in rutrum turpis. Duis eu faucibus est. Aliquam vitae nibh vestibulum, rhoncus augue eu, venenatis erat. Vivamus ipsum metus, sodales nec scelerisque faucibus, cursus in quam. Mauris nibh neque, euismod in malesuada sed, commodo et lacus. Maecenas gravida, lacus dictum eleifend facilisis, justo felis aliquam dui, nec sodales quam neque</p>
+					</div>
+					<div className={css(styles.contentColumn)}>
+						<h3 className={css(styles.h3, styles.h3MarginBottomAdjust)}>BLANDIT</h3>
+						<h3 className={css(styles.h3, styles.h3MarginTopAdjust)}>TINCIDUNT METUS</h3>
+						<p className={css(styles.p)}>Proin eget tortor malesuada, dapibus mi pretium, semper diam. Donec in rutrum turpis. Duis eu faucibus est. Aliquam vitae nibh vestibulum, rhoncus augue eu, venenatis erat. Vivamus ipsum metus, sodales nec scelerisque faucibus, cursus in quam. Mauris nibh neque, euismod in malesuada sed, commodo et lacus. Maecenas gravida, lacus dictum eleifend facilisis, justo felis aliquam dui, nec sodales quam neque</p>
 					</div>
 				</div>
 			</div>
@@ -47,9 +75,9 @@ const styles = StyleSheet.create ({
 		backgroundImage: "url('https://raw.githubusercontent.com/rickMcGavin/nike-test/master/src/assets/images/content-2-bg.png')",
 		backgroundPosition: 'right',
 		backgroundRepeat: 'no-repeat',
-		backgroundSize: 'contain',
+		backgroundSize: 'cover',
 		backgroundColor: '#27292B',
-		padding: '120px 18.5% 0 18.5%'
+		padding: '120px 18.5% 75px 18.5%'
 	},
 
 	row: {
@@ -86,32 +114,29 @@ const styles = StyleSheet.create ({
 
 	bigColumn: {
 		width: '83.5%',
-		maxHeight: '673.344px',
 		textAlign: 'center'
 	},
 
-	minWidth: {
-		width: 'fit-content'
-	},
-
-	circleImage: {
-		transform: 'scale(0.8)',
-		position: 'absolute'
-
+	circleContainer: {
+		backgroundImage: "url('https://raw.githubusercontent.com/rickMcGavin/nike-test/master/src/assets/images/circle-bg.png')",
+		backgroundRepeat: 'no-repeat',
+		backgroundSize: '475px',
+		backgroundPosition: 'top',
 	},
 
 	shoeImage: {
 		transform: 'scale(0.6)',
 		position: 'relative',
 		zIndex: '1',
-		top: '5%',
-		right: '25%'
+		top: '-50px',
+		left: '-20%'
 	},
 
 	spanContainer: {
 		display: 'flex',
 		justifyContent: 'center',
-		paddingRight: '5%'
+		position: 'relative',
+		top: '-105px'
 	},
 
 	span: {
@@ -119,6 +144,31 @@ const styles = StyleSheet.create ({
 		height: '3px',
 		marginRight: '3px',
 		backgroundColor: '#FEFFFF'
+	},
+
+	contentColumn: {
+		width: '33%',
+		marginRight: '10px',
+		paddingRight: '5px'
+	},
+
+	h3: {
+		color: '#FEFFFF',
+		fontWeight: '400'
+	},
+
+	h3MarginTopAdjust: {
+		marginTop: '2px'
+	},
+
+	h3MarginBottomAdjust: {
+		marginBottom: '2px'
+	},
+
+	p: {
+		color: '#778899',
+		fontSize: '0.625rem',
+		lineHeight: '2'
 	}
 
 

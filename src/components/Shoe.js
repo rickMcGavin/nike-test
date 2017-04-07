@@ -19,6 +19,24 @@ class Shoe extends Component {
 		};
 	}
 
+	renderLeftView() {
+		this.setState({leftView: true})
+		this.setState({rightView: false})
+		this.setState({bottomView: false})
+	}
+
+	renderRightView() {
+		this.setState({leftView: false})
+		this.setState({rightView: true})
+		this.setState({bottomView: false})
+	}	
+
+	renderBottomView() {
+		this.setState({leftView: false})
+		this.setState({rightView: false})
+		this.setState({bottomView: true})
+	}
+
 	render() {
 		return(
 			<div className={css(styles.shoeSection)}>
@@ -26,23 +44,49 @@ class Shoe extends Component {
 					<div className={css(styles.smallColumn)}>
 						<h6 className={css(styles.noMargin)}>NIKE</h6>
 						<h5 className={css(styles.noMargin)}>SUPERFLY FG</h5>
-						<div className={css(styles.imageContainer, styles.border)}>
+						<div className={this.state.leftView ? css(styles.imageContainer, styles.border) : css(styles.imageContainer)}
+								 onClick={() => this.renderLeftView()}>
 							<img className={css(styles.image)} src={smallLeftView} alt="Nike Mercurial Superfly FG Left View"/>
 						</div>
-						<div className={css(styles.imageContainer)}>
+						<div className={this.state.rightView ? css(styles.imageContainer, styles.border) : css(styles.imageContainer)}
+								 onClick={() => this.renderRightView()}>
 							<img className={css(styles.image)} src={smallRightView} alt="Nike Mercurial Superfly FG Right View"/>
 						</div>
-						<div className={css(styles.imageContainer)}>
+						<div className={this.state.bottomView ? css(styles.imageContainer, styles.border) : css(styles.imageContainer)}
+								 onClick={() => this.renderBottomView()}>
 							<img className={css(styles.image)} src={smallBottomView} alt="Nike Mercurial Superfly FG Bottom View"/>
 						</div>
 					</div>
 					<div className={css(styles.bigColumn)}>
 						<div className={css(styles.circleContainer)}>
-							<img className={css(styles.shoeImage)} src={leftView} alt="Nike Mercurial Superfly FG Left View Big"/>
-							<div className={css(styles.spanContainer)}>
-								<span className={css(styles.span)}></span>
-								<span className={css(styles.span)}></span>
-							</div>
+						{(() => {
+							if (this.state.leftView){
+								return <div>
+								<img className={css(styles.leftShoeImage)} src={leftView} alt="Nike Mercurial Superfly FG Left View Big"/>
+									<div className={css(styles.leftViewSpanContainer)}>
+										<span className={css(styles.span)}></span>
+										<span className={css(styles.span)}></span>
+									</div>
+								</div>
+								} else if (this.state.rightView) {
+									return <div>
+										<img className={css(styles.rightShoeImage)} src={rightView} alt="Nike Mercurial Superfly FG Left View Big"/>
+										<div className={css(styles.rightViewSpanContainer)}>
+											<span className={css(styles.span)}></span>
+											<span className={css(styles.span)}></span>
+										</div>
+									</div>
+								} else {
+									return <div>
+										<img className={css(styles.bottomShoeImage)} src={bottomView} alt="Nike Mercurial Superfly FG Left View Big"/>
+										<div className={css(styles.bottomViewSpanContainer)}>
+											<span className={css(styles.span)}></span>
+											<span className={css(styles.span)}></span>
+										</div>
+									</div>
+								}
+      				})()}
+							
 						</div>
 					</div>
 				</div>
@@ -124,19 +168,53 @@ const styles = StyleSheet.create ({
 		backgroundPosition: 'top',
 	},
 
-	shoeImage: {
+	leftShoeImage: {
 		transform: 'scale(0.6)',
 		position: 'relative',
 		zIndex: '1',
 		top: '-50px',
-		left: '-20%'
+		left: '-20%',
+		transition: 'left 0.75s ease-in-out'
 	},
 
-	spanContainer: {
+	rightShoeImage: {
+		transform: 'scale(0.6)',
+		position: 'relative',
+		zIndex: '1',
+		top: '-25px',
+		left: '10%',
+		transition: 'left 0.75s ease-in-out'
+	},
+
+	bottomShoeImage: {
+		transform: 'scale(0.6)',
+		position: 'relative',
+		zIndex: '1',
+		top: '70px',
+		left: '-15%',
+		marginBottom: '200px',
+		transition: 'left 0.75s ease-in-out'
+	},
+
+	leftViewSpanContainer: {
 		display: 'flex',
 		justifyContent: 'center',
 		position: 'relative',
 		top: '-105px'
+	},
+
+	rightViewSpanContainer: {
+		display: 'flex',
+		justifyContent: 'center',
+		position: 'relative',
+		top: '-15px'
+	},
+
+	bottomViewSpanContainer: {
+		display: 'flex',
+		justifyContent: 'center',
+		position: 'relative',
+		top: '-18px'
 	},
 
 	span: {

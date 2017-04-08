@@ -18,11 +18,17 @@ class Navbar extends Component {
 
 	render() {
 		return(
-			<nav className={css(styles.nav)}>
+			<nav className={this.state.iconClicked ? 
+				css(styles.nav, styles.extendNav)
+				:
+				css(styles.nav)}>
 				<span className={css(styles.brandSpan)}>
 					<img className={css(styles.logo, styles.smallLogo)} src={logo} alt="Nike Logo"/>
 				</span>
-				<ul className={css(styles.navLinks, styles.smallNavLinks)}>
+				<ul className={this.state.iconClicked ? 
+					css(styles.navLinks, styles.smallNavLinks)
+					:
+					css(styles.navLinks, styles.noDisplay)}>
 					<li >
 						<a className={css(styles.navLink, styles.hover)} href="#">ABOUT</a>
 					</li>
@@ -61,7 +67,12 @@ const styles = StyleSheet.create ({
 		width: '100%',
 		height: '70px',
 		backgroundColor: '#28292B',
-		display: 'flex'
+		display: 'flex',
+		transition: 'height 0.3s ease-out'
+	},
+
+	extendNav: {
+		height: '170px'
 	},
 
 	brandSpan: {
@@ -93,11 +104,22 @@ const styles = StyleSheet.create ({
 		display: 'flex',
 		alignItems: 'center',
 		margin: '0',
-		marginLeft: '12.5%'
+		marginLeft: '12.5%',
+		transition: 'all 0.3s ease-out'
 	},
 
 	smallNavLinks: {
 		'@media (max-width: 500px)': {
+			flexDirection: 'column',
+			minHeight: '100%',
+			marginTop: '5%',
+			lineHeight: '2.5'
+		}
+	},
+
+	noDisplay: {
+		'@media (max-width: 500px)': {
+			transform: 'scale(0)',
 			display: 'none'
 		}
 	},
@@ -119,8 +141,9 @@ const styles = StyleSheet.create ({
 	row: {
 		display: 'flex',
 		justifyContent: 'flex-end',
-		alignItems: 'center',
+		alignItems: 'flex-start',
 		paddingRight: '10px',
+		paddingTop: '19px',
 		width: '100%'
 	},
 

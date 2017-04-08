@@ -1,9 +1,9 @@
 import React from 'react';
-import { StyleSheet, css } from 'aphrodite';
+import { StyleSheet, css } from 'aphrodite/no-important';
 
 const ShoeContent = () => {
 	return (
-		<div className={css(styles.shoeContentSection, styles.row)}>
+		<div className={css(styles.shoeContentSection, styles.row, styles.shoeContentSectionXSmall)}>
 			<div className={css(styles.textContainer)}>
 				<h4 className={css(styles.h4, styles.h4MarginBottomRemove)}>DOWNLOAD & WATCH ALL TUTORIALS ON YOUR DEVICE</h4>
 				<h4 className={css(styles.h4, styles.h4MarginTopAdjust)}>DESKTOP COMPUTER, IPHONE, IPAD OR APPLE DEVICE</h4>
@@ -21,6 +21,12 @@ const styles = StyleSheet.create ({
 		minHeight: '45vh',
 		backgroundColor: '#ADD965',
 		color: '#FEFFFF'
+	},
+
+	shoeContentSectionXSmall: {
+		'@media (max-width: 800px)': {
+			padding: '15px 7.9% 25px 7.9%'
+		}
 	},
 
 	textContainer: {
@@ -73,4 +79,3 @@ const styles = StyleSheet.create ({
 
 export default ShoeContent;
 
-// 15.8% margin/padding

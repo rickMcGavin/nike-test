@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, css } from 'aphrodite';
+import { StyleSheet, css } from 'aphrodite/no-important';
 import smallLeftView from '../assets/images/left-view.png';
 import smallRightView from '../assets/images/right-view.png';
 import smallBottomView from '../assets/images/bottom-view.png';

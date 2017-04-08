@@ -1,10 +1,10 @@
 import React from 'react';
-import { StyleSheet, css } from 'aphrodite';
+import { StyleSheet, css } from 'aphrodite/no-important';
 import logo from '../assets/images/logo.svg';
 
 const Footer = () => {
 	return (
-		<div className={css(styles.footer)}>
+		<div className={css(styles.footer, styles.footerXSmall)}>
 			<div className={css(styles.row, styles.spaceBetween)}>
 				<div className={css(styles.row)}>
 					<div className={css(styles.column)}>
@@ -66,6 +66,12 @@ const styles = StyleSheet.create({
 		minHeight: '50vh',
 		backgroundColor: '#FFFEFF',
 		padding: '50px 15.8% 0 15.8%',
+	},
+
+	footerXSmall: {
+		'@media (max-width: 800px)': {
+			padding: '7.9%'
+		}
 	},
 
 	row: {

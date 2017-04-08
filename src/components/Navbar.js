@@ -68,7 +68,7 @@ const styles = StyleSheet.create ({
 		height: '70px',
 		backgroundColor: '#28292B',
 		display: 'flex',
-		transition: 'height 0.3s ease-out'
+		transition: 'height 0.3s ease-in-out'
 	},
 
 	extendNav: {

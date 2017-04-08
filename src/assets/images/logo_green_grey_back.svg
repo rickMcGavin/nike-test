@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="216px" height="216px" viewBox="0 0 216 216" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>logo_green</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="216" height="216"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="216" height="216" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logo_green">
+            <g id="Page-1">
+                <use id="Rectangle" stroke="#979797" mask="url(#mask-2)" stroke-width="2" fill="#383636" xlink:href="#path-1"></use>
+                <path d="M31.23,142.966 C25.39,142.734 20.612,141.136 16.876,138.168 C16.163,137.601 14.464,135.901 13.894,135.184 C12.379,133.279 11.349,131.425 10.662,129.368 C8.548,123.036 9.636,114.727 13.774,105.608 C17.317,97.801 22.784,90.058 32.322,79.334 C33.727,77.756 37.911,73.141 37.938,73.141 C37.948,73.141 37.72,73.536 37.433,74.017 C34.953,78.171 32.831,83.064 31.675,87.3 C29.818,94.097 30.042,99.93 32.331,104.453 C33.91,107.569 36.617,110.268 39.661,111.76 C44.99,114.371 52.792,114.587 62.32,112.392 C62.976,112.24 95.482,103.611 134.556,93.216 C173.63,82.82 205.605,74.321 205.61,74.328 C205.621,74.337 114.83,113.187 67.699,133.342 C60.235,136.533 58.239,137.339 54.73,138.571 C45.76,141.721 37.725,143.224 31.23,142.966 Z" id="Shape" fill="#A2D550" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

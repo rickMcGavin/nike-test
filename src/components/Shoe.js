@@ -86,7 +86,6 @@ class Shoe extends Component {
 									</div>
 								}
       				})()}
-							
 						</div>
 					</div>
 				</div>
@@ -121,7 +120,7 @@ const styles = StyleSheet.create ({
 		backgroundRepeat: 'no-repeat',
 		backgroundSize: 'cover',
 		backgroundColor: '#27292B',
-		padding: '120px 18.5% 75px 18.5%'
+		padding: '120px 15.8% 75px 15.8%'
 	},
 
 	row: {
@@ -251,7 +250,5 @@ const styles = StyleSheet.create ({
 
 
 })
-
-// column width 16.5%
 
 export default Shoe;

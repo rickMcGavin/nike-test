@@ -26,7 +26,7 @@ const styles = StyleSheet.create ({
 		backgroundImage: "url('https://raw.githubusercontent.com/rickMcGavin/nike-test/master/src/assets/images/content-1-bg.png')",
 		backgroundRepeat: 'no-repeat',
 		backgroundPosition: 'center',
-		backgroundSize: 'contain',
+		backgroundSize: 'cover',
 		display: 'flex',
 		justifyContent: 'center',
 		alignItems: 'center'
@@ -37,7 +37,7 @@ const styles = StyleSheet.create ({
 	},
 
 	logoGreen: {
-		transform: 'scale(0.65)',
+		transform: 'scale(0.65)'
 	},
 
 	mainHeroHeader: {

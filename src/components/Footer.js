@@ -5,9 +5,9 @@ import logo from '../assets/images/logo.svg';
 const Footer = () => {
 	return (
 		<div className={css(styles.footer, styles.footerXSmall)}>
-			<div className={css(styles.row, styles.spaceBetween)}>
-				<div className={css(styles.row)}>
-					<div className={css(styles.column)}>
+			<div className={css(styles.row, styles.spaceBetween, styles.rowXSmall)}>
+				<div className={css(styles.row, styles.innerRowXSmall, styles.spaceBetween)}>
+					<div className={css(styles.column, styles.columnXSmall)}>
 						<h5 className={css(styles.h5)}>WEB DESIGN STUDIO TUTORIALS</h5>
 						<ul className={css(styles.ul)}>
 							<li>Design a creative Blog</li>
@@ -19,7 +19,7 @@ const Footer = () => {
 							<li>Single Page sales portfolio</li>
 						</ul>
 					</div>
-					<div className={css(styles.column)}>
+					<div className={css(styles.column, styles.columnXSmall)}>
 						<h5 className={css(styles.h5)}>STEP BY STEP WEB DESIGN TUTORIALS</h5>
 						<ul className={css(styles.ul)}>
 							<li>Design a creative Blog</li>
@@ -30,8 +30,8 @@ const Footer = () => {
 						</ul>
 					</div>
 				</div>
-				<div className={css(styles.row)}>
-					<div className={css(styles.column)}>
+				<div className={css(styles.row, styles.innerRowXSmall, styles.spaceBetween)}>
+					<div className={css(styles.column, styles.columnXSmall)}>
 						<h5 className={css(styles.h5)}>DESIGNERS</h5>
 						<ul className={css(styles.ul)}>
 							<li>Blaz Robar</li>
@@ -39,7 +39,7 @@ const Footer = () => {
 							<li>Joisp Kelava</li>
 						</ul>
 					</div>
-					<div className={css(styles.column)}>
+					<div className={css(styles.column, styles.columnXSmallAlign, styles.columnXXSmallAlign, styles.columnXXXSmallAlign)}>
 						<h5 className={css(styles.h5)}>BLAZROBAR.COM</h5>
 						<ul className={css(styles.ul)}>
 							<li>About</li>
@@ -78,6 +78,19 @@ const styles = StyleSheet.create({
 		display: 'flex',
 	},
 
+	rowXSmall: {
+		'@media (max-width: 500px)': {
+			flexWrap: 'wrap'
+		}
+	},
+
+	innerRowXSmall: {
+		'@media (max-width: 500px)': {
+			width: '100%',
+			marginTop: '15px'
+		}
+	},
+
 	spaceBetween: {
 		justifyContent: 'space-between'
 	},
@@ -96,6 +109,30 @@ const styles = StyleSheet.create({
 		marginRight: '35px'
 	},
 
+	columnXSmall: {
+		'@media (max-width: 500px)': {
+			marginRight: '15px'
+		}
+	},
+
+	columnXSmallAlign: {
+		'@media (max-width: 500px)': {
+			marginRight: '14%'
+		}
+	},
+
+	columnXXSmallAlign: {
+		'@media (max-width: 400px)': {
+			marginRight: '8%'
+		}
+	},
+
+	columnXXXSmallAlign: {
+		'@media (max-width: 350px)': {
+			marginRight: '0'
+		}
+	},
+
 	ul: {
 		color: '#7D7D88',
 		listStyle: 'none',
@@ -105,7 +142,8 @@ const styles = StyleSheet.create({
 	},
 
 	logo: {
-		transform: 'scale(0.39)'
+		transform: 'scale(0.39)',
+		marginTop: '15px'
 	},
 
 	p: {

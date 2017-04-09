@@ -2,6 +2,7 @@
   "name": "nike-test",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://rickmcgavin.github.io/nike-test",
   "dependencies": {
     "aphrodite": "^1.2.0",
     "react": "15.4.2",

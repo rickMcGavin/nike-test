@@ -67,7 +67,7 @@ class Shoe extends Component {
 							if (this.state.leftView){
 								return <div>
 								<img className={css(styles.leftShoeImage, styles.leftShoeImageSmall, styles.leftShoeImageXSmall, styles.leftShoeImageXXSmall, styles.leftShoeImageXXXSmall)} src={leftView} alt="Nike Mercurial Superfly FG Left View Big"/>
-									<div className={css(styles.leftViewSpanContainer)}>
+									<div className={css(styles.leftViewSpanContainer, styles.leftViewSpanContainerXSmall)}>
 										<span className={css(styles.span)}></span>
 										<span className={css(styles.span)}></span>
 									</div>
@@ -75,7 +75,7 @@ class Shoe extends Component {
 								} else if (this.state.rightView) {
 									return <div>
 										<img className={css(styles.rightShoeImage, styles.rightShoeImageSmall, styles.rightShoeImageXSmall, styles.rightShoeImageXXSmall, styles.rightShoeImageXXXSmall)} src={rightView} alt="Nike Mercurial Superfly FG Left View Big"/>
-										<div className={css(styles.rightViewSpanContainer)}>
+										<div className={css(styles.rightViewSpanContainer, styles.rightViewSpanContainerXSmall)}>
 											<span className={css(styles.span)}></span>
 											<span className={css(styles.span)}></span>
 										</div>
@@ -83,7 +83,7 @@ class Shoe extends Component {
 								} else {
 									return <div>
 										<img className={css(styles.bottomShoeImage, styles.bottomShoeImageSmall, styles.bottomShoeImageXSmall, styles.bottomShoeImageXXSmall, styles.bottomShoeImageXXXSmall)} src={bottomView} alt="Nike Mercurial Superfly FG Left View Big"/>
-										<div className={css(styles.bottomViewSpanContainer)}>
+										<div className={css(styles.bottomViewSpanContainer, styles.bottomViewSpanContainerXSmall)}>
 											<span className={css(styles.span)}></span>
 											<span className={css(styles.span)}></span>
 										</div>
@@ -390,6 +390,12 @@ const styles = StyleSheet.create ({
 		top: '-105px'
 	},
 
+	leftViewSpanContainerXSmall: {
+		'@media (max-width: 500px)': {
+			top: '-280px'
+		}
+	},
+
 	rightViewSpanContainer: {
 		display: 'flex',
 		justifyContent: 'center',
@@ -397,11 +403,23 @@ const styles = StyleSheet.create ({
 		top: '-15px'
 	},
 
+	rightViewSpanContainerXSmall: {
+		'@media (max-width: 500px)': {
+			top: '-190px'
+		}
+	},
+
 	bottomViewSpanContainer: {
 		display: 'flex',
 		justifyContent: 'center',
 		position: 'relative',
 		top: '-18px'
+	},
+
+	bottomViewSpanContainerXSmall: {
+		'@media (max-width: 500px)': {
+			top: '-192px'
+		}
 	},
 
 	span: {

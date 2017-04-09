@@ -68,7 +68,7 @@ const styles = StyleSheet.create ({
 		height: '70px',
 		backgroundColor: '#28292B',
 		display: 'flex',
-		transition: 'height 0.3s ease-in-out'
+		transition: 'height 0.1s ease-in-out'
 	},
 
 	extendNav: {
@@ -119,8 +119,9 @@ const styles = StyleSheet.create ({
 
 	noDisplay: {
 		'@media (max-width: 500px)': {
-			transform: 'translateY(-100%) scale(1.5)',
-			opacity: '0'
+			transform: 'translateY(-100%)',
+			opacity: '0',
+			flexDirection: 'column'
 		}
 	},
 
@@ -142,7 +143,7 @@ const styles = StyleSheet.create ({
 		display: 'flex',
 		justifyContent: 'flex-end',
 		alignItems: 'flex-start',
-		paddingRight: '10px',
+		paddingRight: '20px',
 		paddingTop: '19px',
 		width: '100%'
 	},
@@ -158,7 +159,6 @@ const styles = StyleSheet.create ({
 			justifyContent: 'space-around',
 			width: '30px',
 			height: '30px',
-			zIndex: '1',
 		}
 	},
 
@@ -182,7 +182,7 @@ const styles = StyleSheet.create ({
 	menuLineTwo: {
 		'@media (max-width: 500px)': {
 			transform: 'scaleX(0)',
-			opacity: '0'
+			opacity: '0',
 		}
 	},
 

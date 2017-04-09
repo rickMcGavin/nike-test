@@ -66,7 +66,7 @@ class Shoe extends Component {
 						{(() => {
 							if (this.state.leftView){
 								return <div>
-								<img className={css(styles.leftShoeImage, styles.leftShoeImageSmall, styles.leftShoeImageXSmall, styles.leftShoeImageXXSmall, styles.leftShoeImageXXXSmall)} src={leftView} alt="Nike Mercurial Superfly FG Left View Big"/>
+								<img className={css(styles.leftShoeImage, styles.leftShoeImageMed, styles.leftShoeImageSmall, styles.leftShoeImageXSmall, styles.leftShoeImageXXSmall, styles.leftShoeImageXXXSmall)} src={leftView} alt="Nike Mercurial Superfly FG Left View Big"/>
 									<div className={css(styles.leftViewSpanContainer, styles.leftViewSpanContainerXSmall)}>
 										<span className={css(styles.span)}></span>
 										<span className={css(styles.span)}></span>
@@ -82,7 +82,7 @@ class Shoe extends Component {
 									</div>
 								} else {
 									return <div>
-										<img className={css(styles.bottomShoeImage, styles.bottomShoeImageSmall, styles.bottomShoeImageXSmall, styles.bottomShoeImageXXSmall, styles.bottomShoeImageXXXSmall)} src={bottomView} alt="Nike Mercurial Superfly FG Left View Big"/>
+										<img className={css(styles.bottomShoeImage, styles.bottomShoeImageMed, styles.bottomShoeImageSmall, styles.bottomShoeImageXSmall, styles.bottomShoeImageXXSmall, styles.bottomShoeImageXXXSmall)} src={bottomView} alt="Nike Mercurial Superfly FG Left View Big"/>
 										<div className={css(styles.bottomViewSpanContainer, styles.bottomViewSpanContainerXSmall)}>
 											<span className={css(styles.span)}></span>
 											<span className={css(styles.span)}></span>
@@ -282,8 +282,14 @@ const styles = StyleSheet.create ({
 		position: 'relative',
 		zIndex: '1',
 		top: '-50px',
-		left: '-20%',
+		left: '-11%',
 		transition: 'left 0.75s ease-in-out'
+	},
+
+	leftShoeImageMed: {
+		'@media (min-width: 1000px) and (max-width: 1200px)': {
+			left: '-30%'
+		}
 	},
 
 	leftShoeImageSmall: {
@@ -355,9 +361,15 @@ const styles = StyleSheet.create ({
 		position: 'relative',
 		zIndex: '1',
 		top: '70px',
-		left: '-15%',
+		left: '-5%',
 		marginBottom: '200px',
 		transition: 'left 0.75s ease-in-out'
+	},
+
+	bottomShoeImageMed: {
+		'@media (min-width: 1000px) and (max-width: 1200px)': {
+			left: '-25%'
+		}
 	},
 
 	bottomShoeImageSmall: {

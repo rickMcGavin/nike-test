@@ -105,7 +105,6 @@ const styles = StyleSheet.create ({
 		alignItems: 'center',
 		margin: '0',
 		marginLeft: '12.5%',
-		transition: 'all 0.3s ease-out'
 	},
 
 	smallNavLinks: {
@@ -113,14 +112,15 @@ const styles = StyleSheet.create ({
 			flexDirection: 'column',
 			minHeight: '100%',
 			marginTop: '5%',
-			lineHeight: '2.5'
+			lineHeight: '2.5',
+			transition: 'all 0.3s ease-out'
 		}
 	},
 
 	noDisplay: {
 		'@media (max-width: 500px)': {
-			transform: 'scale(0)',
-			display: 'none'
+			transform: 'translateY(-100%) scale(1.5)',
+			opacity: '0'
 		}
 	},
 

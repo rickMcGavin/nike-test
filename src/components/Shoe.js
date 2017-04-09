@@ -157,6 +157,10 @@ const styles = StyleSheet.create ({
 		}
 	},
 
+	hidden: {
+		display: 'none'
+	},
+
 	mobileHeader: {
 		display: 'none'
 	},

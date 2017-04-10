@@ -35,12 +35,13 @@ const styles = StyleSheet.create ({
 		backgroundColor: '#17171C',
 		width: '100%',
 		minHeight: '75vh',
-		padding: '0 15.8%',
+		padding: '0 15.8% 80px 15.8%',
 	},
 
 	heroContentSmall: {
 		'@media (max-width: 800px)': {
-			padding: '0 7.9%'
+			padding: '0 7.9%',
+			minHeight: '50vh'
 		}
 	},
 

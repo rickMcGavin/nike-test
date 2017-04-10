@@ -351,7 +351,7 @@ const styles = StyleSheet.create ({
 	},
 
 	rightShoeImageXXXSmall: {
-		'@media (max-width: 350px)': {
+		'@media (max-width: 360px)': {
 			left: '-75%'
 		}
 	},
